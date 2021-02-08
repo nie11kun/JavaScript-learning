@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <!-- <div id="demo">test1</div> -->
+
+    <div id="demo3">test</div>
+
+    <div class="demo">test2</div>
+    <div class="demo">test3</div>
+
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+
+    <!-- <img id="img1" src="1.jpg" alt="" srcset=""> -->
+
+    <div id="demo2" style="width: 200px;">some text</div>
+</body>
+<script>
+    /*
+    function myFunction(name, age) {
+        alert("my name is " + name + ", age is " + age);
+    }
+
+    myFunction("marco", 20);
+    //myFunction.call();
+    
+
+    function myFunction(a, b) {
+        return a + b;
+    }
+
+    var x = myFunction(1, 2);
+
+    //alert("this is\n a alert");
+
+    //var a = prompt("please input value", "test");
+    //document.write(a);
+
+    /*
+    var result = confirm("if confirm");
+
+    if (result) {
+        alert("confirmed");
+    }
+    else {
+        alert("not confirmd");
+    }
+    */
+
+    /*
+    var person = {
+        name: "marco", age: 20,
+        like: "basketball", height: 62,
+        test: function() {
+            alert("method");
+        }
+    };
+
+    var x = person.age;
+    var y = person['age'];
+    person.test();
+
+    var a = person.name.length;
+    
+
+    function person(name, age, color) {
+        this.name = name;
+        this.age = age;
+        this.favColor = color;
+    }
+
+    var p1 = new person("marco", 25, "blue");
+    document.write(p1.name);
+    */
+
+    /*
+    function person(name, age, color) {
+        this.name = name;
+        this.age = age;
+        this.favColor = color;
+        this.changeName = function(name) {
+            this.name = name;
+        }
+    }
+
+    var p1 = new person("marco", 25, "blue");
+    p1.changeName("john");
+    document.write(p1.name);
+    
+
+    function person(name, age, color) {
+        this.name = name;
+        this.age = age;
+        this.yearOfBirth = bornyear;
+    }
+
+    function bornyear() {
+        return 2020 - this.age;
+    }
+
+    var p1 = new person("marco", 25);
+    document.write(p1.yearOfBirth());
+    
+
+    var courses = new Array("HTML", "CSS", "JS");
+    var course = courses[0];
+    courses[1] = "c++";
+    
+
+    var courses = new Array();
+    courses[0] = "HTML";
+    courses[1] = "CSS";
+    courses[2] = "JS";
+    
+
+    var courses = ["HTML", "CSS", "JS"];
+    document.write(courses.length);
+    
+
+    var c1 = ["HTML", "CSS", "JS"];
+    var c2 = ["C++"];
+    var newC = c1.concat(c2);
+    
+
+    var a = [];
+    a["name"] = "marco";
+    a["age"] = 20;
+    document.write(a["age"]);
+    
+
+    document.write(Math.PI);
+    
+
+    Math.ceil(Math.random() * 10);
+
+    var n = prompt("please input a number: ", "");
+    var m = Math.sqrt(n);
+    alert(m);
+    
+
+    function myAlert() {
+        alert("hello");
+    }
+    setInterval(myAlert, 3000);
+    
+
+    //var d = new Date();
+    //var d = new Date(86400000);
+
+
+    function printTime() {
+        var d = new Date();
+        var hour = d.getHours();
+        var min = d.getMinutes();
+        var sec = d.getSeconds();
+        document.body.innerHTML = hour + ":" + min + ":" + sec;
+    }
+
+    setInterval(printTime, 1000);
+
+
+    //document.body.innerHTML = "text";
+
+    //var elem = document.getElementById("demo");
+    //elem.innerHTML = "hello world";
+
+    //var arr = document.getElementsByClassName("demo");
+    //arr[0].innerHTML = "hi";
+
+    var arr = document.getElementsByTagName("p");
+    for (var i = 0; i < arr.length; i++) {
+        arr[i].innerHTML = "hi there";
+    }
+
+    //var el = document.getElementById("img1");
+    //el.src = "2.jpg";
+
+    var x = document.getElementById("demo2");
+    x.style.color = '#6600FF';
+    x.style.width = '100px';
+
+    var p = document.createElement("p");
+    var node = document.createTextNode("some text");
+    p.appendChild(node);
+
+    var el = document.getElementById("demo3");
+    el.appendChild(p);
+
+    var person = {
+        fullName: function (city, country) {
+            console.log(this.firstName + " " + this.lastName + ", " + city + " " + country);
+        }
+    }
+
+    var person1 = {
+        firstName: "marco",
+        lastName: "nie"
+    }
+    person.fullName.apply(person1, ["hz", "china"]);
+
+    function test(a, b, c) {
+        console.log(a + b + c);
+    }
+    var arr = [1, 2, 3];
+    test.apply(null, arr);
+    
+
+    var arr = [1, 2, 3, 4];
+    var newArr = arr.map(function(i) {
+        return i * 2;
+    })
+    console.log(newArr);
+
+    var arr = {
+        0: 0,
+        1: 1,
+        2: 2,
+        3: 3
+    }
+
+    var obj = {
+        '0': 0,
+        '1': 1,
+        '2': 2,
+        '3': 3
+    }
+    
+
+    var arr = [1, 3 ,5];
+    var sum = arr.reduce(function(total, curr) {
+        return total + curr;
+    });
+    console.log(sum);
+    
+
+    var arr = [1, 4, 6, 3, 8];
+    var x = [1, 4, 6, 3, 8].find(i => i > 5);
+    var index = [1, 4, 6, 3, 8].findIndex(i => i > 5);
+    console.log(index);
+    */
+    let x = 'a';
+    function test(a) {
+        a = 'b';
+    }
+    test(x);
+    console.log(x);
+    
+
+
+</script>
+</html>

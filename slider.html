@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="prev()"> Prev </button>
+    <img id="slider" src="https://blog.niekun.net/usr/uploads/2020/12/2749019084.jpg">
+    <button onclick="next()"> Next </button>
+</body>
+<script>
+    var images = [
+    "https://blog.niekun.net/usr/uploads/2020/12/2749019084.jpg",
+    "https://blog.niekun.net/usr/uploads/2020/12/1648461111.jpg",
+    "https://blog.niekun.net/usr/uploads/2020/12/3914156262.jpg"];
+
+    var num = 0;
+    function next() {
+        var slider = document.getElementById("slider");
+        num++;
+        if (num >= images.length)
+            num = 0;
+        slider.src = images[num];
+    }
+
+    function prev() {
+        var slider = document.getElementById("slider");
+        num--;
+        if (num < 0)
+            num = images.length - 1;
+        slider.src = images[num];
+    }
+
+</script>
+
+
+</html>
