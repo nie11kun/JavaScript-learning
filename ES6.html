@@ -282,6 +282,10 @@
     import * as math from './lib/math.js'
     console.log(math.sum(math.pi, math.pi));
 
+    import {sum, pi} from './lib/math.js'
+    console.log(sum(2, 2));
+    console.log(pi);
+
     const asyncTest = (work) => {
         return new Promise((resolve, reject) => {
             if (work === "")
